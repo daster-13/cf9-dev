@@ -1,0 +1,33 @@
+package gr.aueb.cf.cf9.ch6;
+
+/**
+ * Arrays and MeTHODS.
+ * Demo of how we pass an array as formal parameter
+ * and also how we return an array from a method.
+ */
+public class ArraysAndMethods {
+    public static void main(String[] args) {
+
+    }
+    public static void printArray(int[] arr) {
+        for(int item : arr){
+            System.out.print(item + " ");
+        }
+    }
+    public static  void printArray(int[] arr, int low, int high)  {
+       if (low < 0 || high > arr.length) {
+           return;
+       }
+       if (low > high) {
+           return;
+       }
+
+       for (int i = low; i <  high; i++) {
+           System.out.print( arr[i] + " ");
+       }
+
+    }
+    public static  int[] getArray5() {
+        return new  int[5];
+    }
+}
